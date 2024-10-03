@@ -1,0 +1,248 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    background-color: hsl(0deg 0% 96.08%);
+    min-height: 100vh;
+    padding: 40px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(4, 235px);
+    grid-template-rows: repeat(3, 250px);
+    grid-template-areas: "cont two two three"
+    "cont four five three"
+    "cont seven eight eight";
+    gap: 20px;
+}
+
+.container {
+    grid-area: cont;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.box {
+    padding: 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    overflow: hidden;
+}
+
+.one {
+    background-color: hsl(31, 66%, 93%);
+    height: calc(50% - 10px);
+}
+
+.one h2 {
+    font-size: 3.5rem;
+    font-weight: 400;
+    letter-spacing: -0.25rem;
+}
+
+.one h2 span {
+    color: hsl(256, 67%, 59%);
+    font-style: italic;
+}
+
+.two {
+    grid-area: two;
+    background-color: hsl(256, 67%, 59%);
+    text-align: center;
+}
+
+.two h2 {
+    font-size: 4.5rem;
+    font-weight: 500;
+    color: white;
+}
+
+.two h2 span:first-child {
+    color: hsl(39, 100%, 71%);
+}
+
+.two h2 span:last-child {
+    font-style: italic;
+}
+
+.two img {
+    width: 150px;
+    margin-inline: auto;
+}
+
+.two p {
+    color: hsl(0, 0%, 100%);
+    font-size: 1.3rem;
+    transform: translateY(-15px);
+}
+
+.three {
+    grid-area: three;
+    background-color: hsl(254, 88%, 90%);
+}
+
+.three h3 {
+    font-size: 3.5rem;
+    font-weight: 400;
+    letter-spacing: -0.25rem;
+    line-height: 0.8;
+    width: 175px;
+}
+
+.three p {
+    font-size: 1.5rem;
+    width: 170px;
+}
+
+.three img {
+    max-width: none;
+    width: 310px;
+}
+
+.four {
+    grid-area: four;
+    background-color: hsl(0, 0%, 100%);
+}
+
+.four h2 {
+    font-size: 3rem;
+    font-weight: 400;
+    letter-spacing: -0.25rem;
+}
+
+.four img {
+    max-width: none;
+    width: 280px;
+}
+
+.five {
+    grid-area: five;
+    background-color: hsl(39, 100%, 71%);
+    justify-content: flex-start;
+}
+
+.five h2 {
+    font-size: 3.5rem;
+    font-weight: 400;
+    letter-spacing: -0.25rem;
+}
+
+.five img {
+    transform: translateY(-10px);
+}
+
+.sex {
+    background-color: hsl(39, 100%, 71%);
+    height: calc(50% - 10px);
+}
+
+.sex h2 {
+    font-size: 3.8rem;
+    font-weight: 400;
+    letter-spacing: -0.25rem;
+}
+
+.seven {
+    grid-area: seven;
+    background-color: hsl(0, 0%, 100%);
+}
+
+.seven h2 {
+    font-size: 4.5rem;
+    font-weight: 500;
+}
+
+.seven p {
+    font-size: 1.4rem;
+    transform: translateY(-10px);
+}
+
+.seven img {
+    max-width: none;
+    width: 150px;
+}
+
+.eight {
+    grid-area: eight;
+    background-color: hsl(256, 67%, 59%);
+    display: flex;
+    flex-direction: row;
+}
+
+.eight h2 {
+    font-size: 2.5rem;
+    color: white;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 62.5rem) {
+    body {
+        padding: 20px;
+    }
+
+    main {
+        width: fit-content;
+        grid-template-columns: 320px;
+        grid-template-rows: repeat(7, auto);
+        grid-template-areas: "two"
+        "four"
+        "five"
+        "three"
+        "eight"
+        "seven"
+        "cont";
+        margin: auto;
+    }
+
+    .container {
+        height: fit-content;
+    }
+
+    .three img {
+        width: auto;
+    }
+
+    .three h3 {
+        width: auto;
+        font-size: 3rem;
+    }
+
+    .three p {
+        width: auto;
+        text-align: center;
+    }
+
+    .sex {
+        height: fit-content;
+    }
+
+    .eight {
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
+
+
+
